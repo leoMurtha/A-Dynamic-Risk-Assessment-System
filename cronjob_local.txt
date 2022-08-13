@@ -1,0 +1,1 @@
+*/10 * * * * cd /Users/leo/Documents/Code/Projects/udacity_mle/A-Dynamic-Risk-Assessment-System/ && /data/bin/python fullprocess.py
