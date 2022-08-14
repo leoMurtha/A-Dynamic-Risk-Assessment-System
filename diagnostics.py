@@ -16,6 +16,10 @@ with open('config.json','r') as f:
 
 model_path = os.path.join(config['prod_deployment_path'])
 test_data_path = os.path.join(config['test_data_path']) 
+input_folder_path = os.path.join(config['input_folder_path'])
+output_folder_path = os.path.join(config['output_folder_path'])
+
+
 
 
 ##################Function to get model predictions
@@ -41,7 +45,7 @@ def model_predictions(dataset_path=None, dataset_name=None):
 ##################Function to get summary statistics
 def dataframe_summary():
     #calculate summary statistics here
-    df = pd.read_csv(os.path.join(test_data_path, "testdata.csv"))
+    df = pd.read_csv(os.path.join(output_folder_path, "finaldata.csv"))
     numeric = df.select_dtypes(include='int64')
     
     describe = numeric.iloc[:, :-1].agg(['mean', 'median', 'std'])
